@@ -15,7 +15,8 @@
 
 eureka:
     instance:
-        prefer-ip-address: true
+        hostname: internal-ecs-internal-alb-1998200305.ap-southeast-1.elb.amazonaws.com
+        prefer-ip-address: false
     client:
         service-url:
             defaultZone: http://admin:${jhipster.registry.password}@${jhipster.registry.host:localhost}:8761/eureka/
