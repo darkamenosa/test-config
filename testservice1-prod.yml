@@ -100,7 +100,7 @@ jhipster:
             timeToLiveInDays: 1461
     security:
         client-authorization:
-            access-token-uri: http://testuaa/oauth/token
+            access-token-uri: http://${jhipster.uaa.host:localhost}:${jhipster.uaa.port:8080}/oauth/token
             token-service-id: testuaa
             client-id: internal
             client-secret: internal
@@ -132,7 +132,7 @@ jhipster:
 
 oauth2:
     signature-verification:
-        public-key-endpoint-uri: http://testuaa/oauth/token_key
+        public-key-endpoint-uri: http://${jhipster.uaa.host:localhost}:${jhipster.uaa.port:8080}/oauth/token_key
         #ttl for public keys to verify JWT tokens (in ms)
         ttl: 3600000
         #max. rate at which public keys will be fetched (in ms)
