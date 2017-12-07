@@ -113,7 +113,7 @@ jhipster:
             backup-count: 1
     security:
         client-authorization:
-            access-token-uri: http://internal-ecs-internal-alb-1998200305.ap-southeast-1.elb.amazonaws.com:9999/oauth/token
+            access-token-uri: http://${jhipster.uaa.url:localhost:8080}/oauth/token
             token-service-id: testuaa
             client-id: internal
             client-secret: internal
@@ -145,7 +145,7 @@ jhipster:
 
 oauth2:
     signature-verification:
-        public-key-endpoint-uri: http://internal-ecs-internal-alb-1998200305.ap-southeast-1.elb.amazonaws.com:9999/oauth/token_key
+        public-key-endpoint-uri: http://${jhipster.uaa.url:localhost:8080}/oauth/token_key
         #ttl for public keys to verify JWT tokens (in ms)
         ttl: 3600000
         #max. rate at which public keys will be fetched (in ms)
